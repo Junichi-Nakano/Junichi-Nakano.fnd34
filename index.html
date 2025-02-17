@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">      <!--  //文字化け防止 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--  デバイスに画面を合せる -->
+  <meta name="theme-color" content="#000000"><!--  ベースカラーを設定 -->
+  <script type="text/javascript" src="modules/lodash.min.js"></script>
+  <script type="text/javascript" src="modules/test-boilerplate.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="calcu.css">
+  <title>断面係数計算</title>
+</head>
+
+<body>
+  <h1>断面係数(Z)計算</h1>
+    <div>現場で 自動車の簡易性能を すっと計算できるシステムを検討。</div>
+    <div>プレゼンは、材料力学の一般常識の断面係数を算出する基本骨格を構築。</div><br>
+    <div>将来的には、下記 性能予測できる切替システムを目指す。</div>
+    <div>　　　１）応力計算（曲げモーメント／断面係数）</div>
+    <div>　　　２）ばね上共振計算</div>
+    <div>　　　３）ロール剛性</div>
+    <div>　　　４）ばね定数計算</div>
+    <div>　　　５）その他  性能計算</div><br>
+  <div id="sharp">
+    ■  計算対象形状  ■<br>
+    <button onclick="change()" id="pict">切替ボタン（工事中）</button><br>
+    <!-- <img id="sect" src="円.jpg" type = "file"><br> -->
+    <img id="pctImage1" src="長方形.jpg">
+    <img id="pctImage2" src="円.jpg"><br>
+     <!-- 構想中　現在作成中：下記divに図形データデータを差替えたい -->
+    
+  </div><br>
+
+  <div id="areaInput">
+    ■  入力値  ■<br>
+    幅　 
+    <input type="number" id="number1" placeholder="幅    ｂ">
+    (mm)<br>
+    高さ
+    <input type="number" id="number2" placeholder="高さ ｈ">
+    (mm)<br>
+    直径
+    <input type="number" id="number3" placeholder="直径 ｄ">
+    (mm)<br>
+    <button onclick="calculate()">計算ボタン</button>
+  </div><br>
+
+  <div id="result"> 計算結果  ？  </div><br>
+  <div id="result2">丸断面      計算結果  ？  </div>
+</body>
+
+</html>
